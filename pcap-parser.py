@@ -49,6 +49,6 @@ output_merged_file = 'output.pcap'
 pcap_files = start_parallel_capture(interfaces, capture_duration)
 
 if len(pcap_files) != 2:
-    raise ValueError("Le nombre de fichiers pcap capturés est incorrect. Assurez-vous de capturer sur exactement deux interfaces.")
+    raise ValueError("The number of pcap files is too big. Ensure capturing exactly 2 interfaces.")
 
 merge_pcaps(pcap_files[0], pcap_files[1], output_merged_file)
